@@ -8,7 +8,7 @@ import (
 // database connection vars:
 const dbUser = "postgres"
 const dbPassword = "admin"
-const dbname = "gtrade"
+const dbname = "dbname"
 const sslmode = "disable"
 
 func DatabaseConnection() *sql.DB {
