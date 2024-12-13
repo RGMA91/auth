@@ -25,7 +25,7 @@ func main() {
 
 	// Protected routes: routes that require authorization: authorization token retrieved in login handler
 	router.HandleFunc("/api/authenticate", authenticator.Authenticate).Methods("GET") // Function authenticator.Authenticate only verifies the authentication
-	router.HandleFunc("/api/logic/", logic.DoSomeLogic).Methods("GET")                //route protected by funcion authenticator.Authenticate
+	router.HandleFunc("/api/logic/", logic.DoSomeLogic).Methods("GET")                //route protected by function authenticator.Authenticate
 
 	log.Println("Starting the server on: " + serverAddress)
 	err := http.ListenAndServe(serverAddress, router)
